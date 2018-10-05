@@ -1,0 +1,14 @@
+Source: eta-widget-appsmenu
+Section: utils
+Priority: optional
+Maintainer: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
+Build-Depends: debhelper (>= 9),
+Standards-Version: 3.9.6
+Homepage: http://etap.org.tr
+
+Package: eta-widget-appsmenu
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ETAP uygulama menüsü gereci
+ Panel içerisinde kullanılabilen basit bir uygulama
+ başlatma menüsü.
