@@ -8,7 +8,7 @@ Homepage: http://etap.org.tr
 
 Package: eta-widget-appsmenu
 Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, eta-engine
 Description: ETAP uygulama menüsü gereci
  Panel içerisinde kullanılabilen basit bir uygulama
  başlatma menüsü.
