@@ -38,62 +38,57 @@ Item {
         id: allapps
         anchors.fill: parent
         color: "#6d6f76"
-        Row {
+
+        Item {
+            id: toolbuttonappcontainer
+            width: minimumWidth * 21 / 100
+            height: width
             anchors {
-                top: parent.top
-                topMargin: 0
-                fill: parent
+                left: parent.left
+                leftMargin: leftrightAlign
+                verticalCenter: parent.verticalCenter
             }
-            Item {
-                id: toolbuttonappcontainer
-                width: minimumWidth * 21 / 100
-                height: width
-                anchors {
-                    left: parent.left
-                    leftMargin: leftrightAlign
-                    verticalCenter: parent.verticalCenter
+            PlasmaWidgets.IconWidget {
+                id: appIcon
+                anchors.fill: parent
+                onClicked: {
+                    plasmoid.togglePopup()
                 }
-                PlasmaWidgets.IconWidget {
-                    id: appIcon
-                    anchors.fill: parent
-                    onClicked: {
-                        plasmoid.togglePopup()
-                    }
-                    Component.onCompleted: {
-                        setIcon("eta-start-menu")
-                    }
-                }
-            }
-            Item {
-                anchors {
-                    left: toolbuttonappcontainer.right
-                    leftMargin: textAlign
-                    verticalCenter: parent.verticalCenter
-                }
-                Text {
-                    id: allappstext
-                    font.family: textFont
-                    text: "TÜM\nUYGULAMALAR"
-                    verticalAlignment: Text.AlignVCenter
-                    color: "#ffffff"
-                    font.bold: true
-                    elide: Text.ElideLeft
-                    horizontalAlignment: Text.AlignLeft
-                    anchors {
-                        left: parent.left
-                        leftMargin: 0
-                        verticalCenter: parent.verticalCenter
-                        verticalCenterOffset: 0
-                    }
-                }
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        plasmoid.togglePopup()
-                    }
+                Component.onCompleted: {
+                    setIcon("eta-start-menu")
                 }
             }
         }
+        Item {
+            anchors {
+                left: toolbuttonappcontainer.right
+                leftMargin: textAlign
+                verticalCenter: parent.verticalCenter
+            }
+            Text {
+                id: allappstext
+                font.family: textFont
+                text: "TÜM\nUYGULAMALAR"
+                verticalAlignment: Text.AlignVCenter
+                color: "#ffffff"
+                font.bold: true
+                elide: Text.ElideLeft
+                horizontalAlignment: Text.AlignLeft
+                anchors {
+                    left: parent.left
+                    leftMargin: 0
+                    verticalCenter: parent.verticalCenter
+                    verticalCenterOffset: 0
+                }
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    plasmoid.togglePopup()
+                }
+            }
+        }
+
     }
 
     PlasmaCore.DataSource {

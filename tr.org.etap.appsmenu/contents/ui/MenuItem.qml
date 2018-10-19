@@ -71,7 +71,7 @@ Item {
 			anchors.left: icon.right
 			anchors.verticalCenter: icon.verticalCenter;
             anchors.leftMargin: leftSideMargin
-
+            spacing: 3
 			PlasmaComponents.Label {
 				id: label
                 width: menuItem.width - 2 * leftSideMargin - icon.width - (arrowLoader.sourceComponent == arrow ? arrowLoader.width + leftSideMargin : 0)
@@ -82,11 +82,7 @@ Item {
 			}
 
 			PlasmaComponents.Label {
-				id: subLabel
-                anchors {
-                    top:label.bottom
-                    topMargin:3
-                }
+				id: subLabel                
 				width: label.width
 				height: showDescription ? label.height : 0
                 font.pointSize: 8

@@ -187,11 +187,13 @@ Rectangle {
 
     Item {
         id: centralWidget
+
         anchors.top: searchField.bottom
         anchors.left: main.left
         anchors.right: main.right
         anchors.bottom: parent.bottom
         anchors.topMargin: leftSideMargin
+        anchors.bottomMargin: 50
         clip: true
 
         Menu {
@@ -225,12 +227,11 @@ Rectangle {
             Title {
                 id: appsTitle
                 anchors {
-                    top: searchMenu.bottom
+                    top: parent.top
                     left: parent.left
                     right: parent.right
                     rightMargin: leftSideMargin
-                    leftMargin: leftSideMargin
-                    topMargin: leftSideMargin
+                    leftMargin: leftSideMargin                    
                 }
                 fontPointSize : main.fontPointSize
                 leftSideMargin: main.leftSideMargin
