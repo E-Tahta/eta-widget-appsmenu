@@ -1,3 +1,9 @@
+eta-widget-appsmenu (1.2) unstable; urgency=medium
+
+  * Change runCommand prosedure and clickable area
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Fri, 19 Oct 2018 14:36:53 +0300
+
 eta-widget-appsmenu (1.1) unstable; urgency=medium
 
   * Add eta-engine to depends
